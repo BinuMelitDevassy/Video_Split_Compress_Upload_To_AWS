@@ -1,0 +1,7 @@
+The source code is included in the folder CompDLL
+
+The visual studio solution file is CompDLL/CompDLL.sln
+
+Th include file contains files from FFMPEG library, I included those files to make code readable. Kindly ignore those files while reviewing
+
+This DLL provide functionality to read a video file, decode, encode into small chunks and upload those chunks to aws. The decoder and encoder are implemented using FFMPEG library, it can read most of the standard input video format and encoding into H264 or avi based on the configuration. The encoded output files will be in small chunks (based on the configuration) and the completed chunks will be uploaded to AWS. After the initial few chunks the compression and aws uploading will happen parallelly.  Also, we can control many parameters related to compression and uploading using configuration file.
